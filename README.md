@@ -19,6 +19,15 @@ Reinicie o vscode. Ele ja estará instalado. Para averiguar, clique em extensõe
 
 <hr>
 
+#### Adaptação
+
+Para editar o arquivo com base nas politicas e padrões de sua empresa, edit o arquivo **[snippet.json](https://github.com/EuFreela/oemagic/blob/master/oemagic/snippets/snippets.json)**.
+
+Ou siga o desenvolvimento de um **[snippet](https://code.visualstudio.com/docs/editor/userdefinedsnippets)** para vscode
+
+
+<hr>
+
 ##### NOMENCLATURAS
 
 
