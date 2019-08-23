@@ -1,0 +1,783 @@
+{
+    "Comment Code Titles for Data Base": {
+        "prefix": "@cctdb",
+        "body": [
+            "/*",
+            "||------------------------------------------------------",
+            "||EMPRESA       :   ${1:Insira o nome da empresa}",
+            "||SISTEMA       :   ${2:Insira o nome do Sistema}",
+            "||OBJETIVO      :   ${3:Descreva o objetivo deste documento}",
+            "||AUTOR         :   ${4:Insira o nome do autor deste documento}",
+            "||CRIAÇÃO       :   ${5:Dia}/${6|Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro|}/${7:Ano}",
+            "||MANUTENÇÃO    :   ${8:Dia}/${9|Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro|}/${10:Ano}",
+            "||OBSERVAÇÃO    :   ${11:Descreva alguma observação}",
+            "||------------------------------------------------------",
+            "*/"
+        ],
+        "description": "Comment Code Titles for Data Base."
+    },
+    "Comment Code Titles for System": {
+        "prefix": "@ccts",
+        "body": [
+            "/*",
+            "|********************************************************",
+            "| EMPRESA           : ${1:Insira o nome da empresa}",
+            "| OBJETIVO          : ${2:Descreva o objetivo deste documento}",
+            "|",
+            "|--------------------------------------------------------",
+            "| AUTOR             : ${3:Insira o nome do autor deste documento}",
+            "| DATA CRIAÇÃO      : ${4:Dia}/${5|Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro|}/${6:Ano}",
+            "| MANUTENÇÃO        : ${7:Dia}/${8|Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro|}/${9:Ano}",
+            "| OBSERVAÇÃO        : ${10:Descreva alguma observação}",
+            "|", 
+            "|*********************************************************",
+            "*/"
+        ],
+        "description": "Comment Code Titles for System."
+    },
+    "Comment Code Line for All": {
+        "prefix": "@ccl",
+        "body": [
+            "/*",
+            "// -- ${1:Insira um comentário de linha} -- //",
+            "*/"
+        ],
+        "description": "Comment Code Line for All."   
+    },
+    "Comment Code Class PHP": {
+        "prefix": "@ccc.php",
+        "body": [
+            "\t/***************************************************************************",
+            "\t* GETTERS",
+            "\t*/",
+            "\n",
+            "\t// -- ${1:Comentário} -- //",
+            "\n",
+            "\t/***************************************************************************",
+            "\t* POSTTERS",
+            "\t*/",
+            "\n",
+            "\t// -- ${2:Comentário} -- //",
+            "\n",
+            "\t/***************************************************************************",
+            "\t* PUTTERS",
+            "\t*/",
+            "\n",
+            "\t// -- ${3:Comentário} -- //",
+            "\n",
+            "\t/***************************************************************************",
+            "\t* DELETERS",
+            "\t*/",
+            "\n",
+            "\t// -- ${4:Comentário} -- //",
+            "\n\n",
+            "\t/***************************************************************************",
+            "\t* PRIVATE METHODS",
+            "\t*/"
+        ],
+        "description": "Comment Code Class PHP."
+    },
+    "Comment Code Controller PHP Functions": {
+        "prefix": "@ccc.php.f",
+        "body": [
+            "\t/***************************************************************************",
+            "\t* CONSTRUCTOR",
+            "\t*/",
+            "\tpublic function __construct()",
+            "\t{ }",
+            "\n\n",
+            "\t/***************************************************************************",
+            "\t* GETTERS",
+            "\t*/",
+            "\t// -- ${1:Comentário} -- /",
+            "\tpublic function get$2()",
+            "\t{",
+            "\n",
+            "\t\t${3:Insira aqui o código}",
+            "\n",
+            "\t}",
+            "\n",
+            "\t/***************************************************************************",
+            "\t* POSTTERS",
+            "\t*/",
+            "\t// -- ${4:Comentário} -- /",
+            "\tpublic function post$2()",
+            "\t{",
+            "\n",
+            "\t\t${5:Insira aqui o código}",
+            "\n",
+            "\t}",
+            "\n",
+            "\t/***************************************************************************",
+            "\t* PUTTERS",
+            "\t*/",
+            "\t// -- ${6:Comentário} -- /",
+            "\tpublic function put$2()",
+            "\t{",
+            "\n",
+            "\t\t${7:Insira aqui o código}",
+            "\n",
+            "\t}",
+            "\t/***************************************************************************",
+            "\t* DELETERS",
+            "\t*/",
+            "\t// -- ${8:Comentário} -- /",
+            "\tpublic function delete$2()",
+            "\t{",
+            "\n",
+            "\t\t${9:Insira aqui o código}",
+            "\n",
+            "\t}",
+            "\n\n",
+            "\t/***************************************************************************",
+            "\t* PRIVATE METHODS",
+            "\t*/",
+            "\n",
+            "\t"
+        ]
+    },
+    "Create Validate Request Laravel": {
+        "prefix": "@c.vrl",
+        "body": [
+            "\t$request->validate([",
+                "\t'${1:Insira o name do input}'=> '${2|accepted,active_url,after:date,after_or_equal:date,alpha,alpha_dash,alpha_num,array,bail,before:date,before_or_equal:date,between:min,max,boolean,confirmed,date,date_equals:date,date_format:format,different:field,digits:value,digits_between:min,max,dimensions,distinct,email,exists:table,column,file,filled,gt:field,gte:field,image,in_array:anotherfield.*,integer,ip,ipv4,ipv6,li:field,lte:field,max:value,min:value,not_regex:pattern,nullable,numeric,present,regex:pattern,required,same:field,size:value,string,timezone,unique:table,column,except,idColumn|}',", 
+            "\t]);",
+            "\n",            
+            "\t${3:Insira o código}",
+            "\n",
+            "\tif( ${4:Insira a variável de retorno} ):",        
+            "\t\treturn redirect()->route('${6:Nome da rota de redirecionamento}')->with('flash_message',DB::table('system_message')->where('code','=',${7:Insira o código para mensagem de sucesso})->select('message')->first()->message);",        
+            "\telse:",
+            "\t\treturn redirect()->back()->with('flash_message',DB::table('system_message')->where('code','=',${8:Insira o código para mensagem de erro})->select('message')->first()->message);",
+            "\tendif;"            
+        ],
+        "description": "Create Validate Request for Laravel."
+    },
+    "Create Laravel Route Crud": {
+        "prefix": "@cr.lc",
+        "body": [
+            "\tRoute::get('/','$1Controller@get$1')->name('$1.get$1');",
+            "\tRoute::get('/$1','$1Controller@get$1')->name('$1.get$1');",
+            "\tRoute::post('/$1','$1Controller@get$1')->name('$1.post$1');",
+            "\tRoute::put('/$1','$1Controller@get$1')->name('$1.put$1');",
+            "\tRoute::delete('/$1','$1Controller@get$1')->name('$1.delete');"
+        ],
+        "description": "Content for 'name' and 'url' must be lowercase. For first letter of controller, it must be uppercase."
+    },
+    "Create Laravel Route": {
+        "prefix": "@cr.lara",
+        "body": [
+            "\tRoute::${1|get,post,put,delete,any,match|}('/$2','$2Controller@$1$2')->name('$2.$1$2');"
+        ],
+        "description": "Create Laravel Route."
+    },
+    "Create Laravel Group": {
+        "prefix": "@cr.lg",
+        "body": [
+            "\t/**",
+            "\t* FRONTEND",
+            "\t*/",
+            "\tRoute::group(['middleware' => 'web'],", 
+            "\tfunction() {",
+            "\t\t$1",
+            "\t});",
+            "\t/**",
+            "\t* BACKEND",
+            "\t*/",
+            "\tRoute::group(['middleware' => 'auth'],",
+            "\tfunction() {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Create Laravel Group."
+    },
+    "Create Laravel Route Group Crud": {
+        "prefix": "@cr.lgc",
+        "body": [
+            "\t/**",
+            "\t* FRONTEND",
+            "\t*/",
+            "\tRoute::group(['middleware' => 'web'],", 
+            "\tfunction() {",
+                "\t\tRoute::get('/','$1Controller@get$1')->name('$1.get$1');",
+                "\t\tRoute::get('/$1','$1Controller@get$1')->name('$1.get$1');",
+                "\t\tRoute::post('/$1','$1Controller@get$1')->name('$1.post$1');",
+                "\t\tRoute::put('/$1','$1Controller@get$1')->name('$1.put$1');",
+                "\t\tRoute::delete('/$1','$1Controller@get$1')->name('$1.delete');",
+            "\t});",
+            "\t/**",
+            "\t* BACKEND",
+            "\t*/",
+            "\tRoute::group(['middleware' => 'auth'],",
+            "\tfunction() {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Create Laravel Route Group Crud."
+    },
+    "Create Laravel Model Page": {     
+        "prefix": "@cr.lmp",
+        "body": [
+            "<?php",
+            "\n",
+            "\tnamespace App/Models;\n",
+            "\tuse Illuminate\\Database\\Eloquent\\Model;\n",
+            "\tclass $1 extends Model",
+            "\t{",
+            "\t\tprotected $table = '$2';",
+            "\t\tprotected $guarded = [$3]; // INSIRA APENAS O ELEMENTO QUE NÃO QUER QUE APAREÇA",
+            "\t}",
+            "\n"
+        ],
+        "description": "Create Laravel Model Page."
+    },
+    "Create Laravel Model Atributs": {     
+        "prefix": "@cr.lm",
+        "body": [
+            "\t\tprotected $table = '${1:Nome da tabela}';",
+            "\t\tprotected $guarded = [$2]; // INSIRA APENAS O ELEMENTO QUE NÃO QUER QUE APAREÇA",
+            "\n"
+        ],
+        "description": "Create Laravel Model Atributs."
+    },
+    "Create Form Element": {     
+        "prefix": "@cv.n.form",
+        "body": [
+            "\t<form id='frm$1' name='frm$1' method='${2|get,post,put,delete,any,match|}' action='$3'>",
+            "\t\t<label id='lbl$4' name='lbl$4'></label>",
+            "\t\t<input type='${5|text,password,submit,reset,radio,checkbox,button,file,image,color,date,datetime-local,email,month,number,url,week,search,tel|}' name='$6' >",
+            "\t\t<input type='button' id='btn$7' name='btn$7' value='$8'>",
+            "\t</form>"
+        ],
+        "description": "Create Form Element."
+    },
+    "Create Form Element Laravel": {     
+        "prefix": "@cv.n.form.lara",
+        "body": [
+            "\t<form id=\"frm$1\" name=\"frm$1\" method=\"${2|get,post,put,delete,any,match|}\" action=\"{{route('$3')}}\">",
+            "\t\t@$2",
+            "\t\t\t<label id='lbl$4' name='lbl$4'></label>",
+            "\t\t\t<input type='${5|text,password,submit,reset,radio,checkbox,button,file,image,color,date,datetime-local,email,month,number,url,week,search,tel|}' id=\"$6\" name=\"$6\" >",
+            "\t\t@if($errors->has('$6'))",
+            "\t\t\t<div class='error'>",
+            "\t\t\t\t{{ $errors->first('$6'); }}",
+            "\t\t@endif",
+            "\t\t\t<input type='button' id='btn$7' name='btn$7' value='$8'>",
+            "\t\t@csrf",
+            "\t</form>"
+        ],
+        "description": "Create Form Element Laravel."
+    },
+    "Create Variable Controller AdRotator": {
+        "prefix": "@v.adrotator",
+        "body": [
+            "art${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller ArrayList": {
+        "prefix": "@v.arraylist",
+        "body": [
+            "ayl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Button": {
+        "prefix": "@v.button",
+        "body": [
+            "ayl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Calendar": {
+        "prefix": "@v.calendar",
+        "body": [
+            "cld${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller CheckBox": {
+        "prefix": "@v.checkbox",
+        "body": [
+            "chk${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller CheckBoxList": {
+        "prefix": "@v.checkboxlist",
+        "body": [
+            "chkl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller ComboBox": {
+        "prefix": "@v.combobox",
+        "body": [
+            "cbo${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller CompareValidator": {
+        "prefix": "@v.comparevalidator",
+        "body": [
+            "cmv${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller CrystalReportViewer": {
+        "prefix": "@v.crystalreportviewer",
+        "body": [
+            "crv${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller CustomValidator": {
+        "prefix": "@v.customvalidator",
+        "body": [
+            "ctv${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataColumn": {
+        "prefix": "@v.datacolumn",
+        "body": [
+            "dcl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataGrid": {
+        "prefix": "@v.datagrid",
+        "body": [
+            "dgd${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataList": {
+        "prefix": "@v.datalist",
+        "body": [
+            "dls${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataRow": {
+        "prefix": "@v.datarow",
+        "body": [
+            "drw${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataRowView": {
+        "prefix": "@v.datarowview",
+        "body": [
+            "drv${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataSet": {
+        "prefix": "@v.dataset",
+        "body": [
+            "dst${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataTable": {
+        "prefix": "@v.datatable",
+        "body": [
+            "dtb${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DataView": {
+        "prefix": "@v.dataview",
+        "body": [
+            "dvw${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller DropDownList": {
+        "prefix": "@v.dropdownlist",
+        "body": [
+            "ddl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller GroupBox": {
+        "prefix": "@v.groupbox",
+        "body": [
+            "grp${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Hashtable": {
+        "prefix": "@v.hashtable",
+        "body": [
+            "htb${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller HyperLink": {
+        "prefix": "@v.hyperlink",
+        "body": [
+            "hyp${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Image": {
+        "prefix": "@v.image",
+        "body": [
+            "img${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller ImageButton": {
+        "prefix": "@v.imagebutton",
+        "body": [
+            "ibtn${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Label": {
+        "prefix": "@v.label",
+        "body": [
+            "lbl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller LinkButton": {
+        "prefix": "@v.linkbutton",
+        "body": [
+            "lbtn${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller LinkLabel": {
+        "prefix": "@v.linklabel",
+        "body": [
+            "llbl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller ListBox": {
+        "prefix": "@v.listbox",
+        "body": [
+            "lst${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Literal": {
+        "prefix": "@v.literal",
+        "body": [
+            "lit${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Menu(WinForms)": {
+        "prefix": "@v.menu-winforms",
+        "body": [
+            "mnultem${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Panel": {
+        "prefix": "@v.panel",
+        "body": [
+            "pnl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Picture": {
+        "prefix": "@v.picture",
+        "body": [
+            "pic${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller PlaceHolder": {
+        "prefix": "@v.placeholder",
+        "body": [
+            "plh${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller ProgressBar": {
+        "prefix": "@v.progressbar",
+        "body": [
+            "prg${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Radio/Option Button": {
+        "prefix": "@v.radiooptionbutton",
+        "body": [
+            "opt${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller RadioButtonList": {
+        "prefix": "@v.radiobuttonlist",
+        "body": [
+            "rbtnl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller RangeValidator": {
+        "prefix": "@v.ragevalidator",
+        "body": [
+            "rgv${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller RegularExpressionValidator": {
+        "prefix": "@v.regularexpressionvalidator",
+        "body": [
+            "rev${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Repeater": {
+        "prefix": "@v.regularexpressionvalidator",
+        "body": [
+            "rep${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller RequiredFieldValidator": {
+        "prefix": "@v.requiredfieldvalidator",
+        "body": [
+            "rfv${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller TabControl": {
+        "prefix": "@v.tablecontrol",
+        "body": [
+            "tab${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Table": {
+        "prefix": "@v.table",
+        "body": [
+            "tbl${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller TextBox": {
+        "prefix": "@v.textbox",
+        "body": [
+            "txt${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller ValidationSummary": {
+        "prefix": "@v.validationsummery",
+        "body": [
+            "vsm${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller WebService": {
+        "prefix": "@v.webservice",
+        "body": [
+            "wse${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Variable Controller Xml": {
+        "prefix": "@v.xml",
+        "body": [
+            "xml${1:Customer}"
+        ],
+        "description": "Create Variable Controller. Camel Case."
+    },
+    "Create Archive Form": {
+        "prefix": "@a.form",
+        "body": [
+            "frm${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Form PopUp": {
+        "prefix": "@a.form-popup",
+        "body": [
+            "frmPop${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Class": {
+        "prefix": "@a.class",
+        "body": [
+            "cls${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Module": {
+        "prefix": "@a.module",
+        "body": [
+            "mdl${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive User Control": {
+        "prefix": "@a.usercontrol",
+        "body": [
+            "wuc${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Style Css": {
+        "prefix": "@a.css",
+        "body": [
+            "css${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive JavaScript": {
+        "prefix": "@a.jsc",
+        "body": [
+            "jsc${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Report": {
+        "prefix": "@a.report",
+        "body": [
+            "rel${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive DataSet": {
+        "prefix": "@a.dataset",
+        "body": [
+            "dst${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Xml": {
+        "prefix": "@a.xml",
+        "body": [
+            "xml${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Custom Control": {
+        "prefix": "@a.customcontrol",
+        "body": [
+            "cco${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Archive Html Page": {
+        "prefix": "@a.html",
+        "body": [
+            "html${1:Customer}"
+        ],
+        "description": "Create Name Archive."
+    },
+    "Create Variable String": {
+        "prefix": "@vp.strings",
+        "body": [
+            "str${1:Customer}"
+        ],
+        "description": "Char, nChar, Varchar, nVarchar, Text, nText."
+    },
+    "Create Variable Datetime": {
+        "prefix": "@vp.datetime",
+        "body": [
+            "dte${1:Customer}"
+        ],
+        "description": "Datetime, SmallDatetime."
+    },
+    "Create Variable Integer": {
+        "prefix": "@vp.integer",
+        "body": [
+            "int${1:Customer}"
+        ],
+        "description": "Tinyint, Smallint, Integer, Bigint."
+    },
+    "Create Variable Bit": {
+        "prefix": "@vp.bit",
+        "body": [
+            "bit${1:Customer}"
+        ],
+        "description": "Bit."
+    },
+    "Create Variable Real": {
+        "prefix": "@vp.real",
+        "body": [
+            "real${1:Customer}"
+        ],
+        "description": "Bit."
+    },
+    "Create Variable Float": {
+        "prefix": "@vp.float",
+        "body": [
+            "float${1:Customer}"
+        ],
+        "description": "Float, Double."
+    },
+    "Create Variable Decimal": {
+        "prefix": "@vp.decimal",
+        "body": [
+            "dec${1:Customer}"
+        ],
+        "description": "Decimal."
+    },
+    "Create Variable Money": {
+        "prefix": "@vp.money",
+        "body": [
+            "cur${1:Customer}"
+        ],
+        "description": "SmallMoney, Money."
+    },
+    "Create Variable Binary": {
+        "prefix": "@vp.binary",
+        "body": [
+            "bin${1:Customer}"
+        ],
+        "description": "Binary, varBinary."
+    },
+    "Create Variable Image": {
+        "prefix": "@vp.image",
+        "body": [
+            "img${1:Customer}"
+        ],
+        "description": "Image."
+    },
+    "Create Variable Timestamp": {
+        "prefix": "@vp.timestamp",
+        "body": [
+            "tsp${1:Customer}"
+        ],
+        "description": "Timestamp."
+    },
+    "Create Variable UniqueIdentifier": {
+        "prefix": "@vp.uniqueidentifier",
+        "body": [
+            "guid${1:Customer}"
+        ],
+        "description": "UniqueIdentifier."
+    },
+    "Create Variable Sql_Variant": {
+        "prefix": "@vp.sqlvariant",
+        "body": [
+            "var${1:Customer}"
+        ],
+        "description": "Sql_Variant."
+    },
+    "Create Variable Cursor": {
+        "prefix": "@vp.cursor",
+        "body": [
+            "crs${1:Customer}"
+        ],
+        "description": "Cursor."
+    },
+    "Create Variable Boolean": {
+        "prefix": "@vp.boolean",
+        "body": [
+            "bln${1:Customer}"
+        ],
+        "description": "Boolean."
+    }
+
+}
