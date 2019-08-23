@@ -11,7 +11,7 @@
 
 Para fins pessoais e de projeto, esta extensão não esta (ainda), disponibilizada publicamente no repositório de extensões do VSCODE. Para utilizar, caso queira, basta importar o diretório **oemagic** para dentro da sua instalaçao do vscode.
 
-- windows: C:\Users\seu_usuário\.vscode\extensions
+- windows: **C:\\Users\\seu_usuário\\.vscode\\extensions**
 
 Reinicie o vscode. Ele ja estará instalado. Para averiguar, clique em extensões e busque por **oemagic**.
 
@@ -204,7 +204,9 @@ Reinicie o vscode. Ele ja estará instalado. Para averiguar, clique em extensõe
 </pre>
 
 <hr>
+
 ### Banco de dados:
+
 |Tipo       |Nomenclatura   |Exemplo    |
 |-----------|---------------|-----------|
 |Tabela     |tbl            |tblCliente |
@@ -214,8 +216,11 @@ Reinicie o vscode. Ele ja estará instalado. Para averiguar, clique em extensõe
 ### PROJETOS EM LARAVEL:
 
 #### 1. Controller
+
 Nomes para controllers respeitam o nome da operação terminado com controller em Pascal Case.
+
 <p>Exemplo</p>
+
 - HomeController;
 - AccountController;
 - TokenController;
@@ -393,9 +398,13 @@ private function calcOldPeople( birth )
 
 
 #### 2. Routes:
+
 Camel Case.
+
 <p>Exemplo</p>
+
 Considere que a controller home já tenha sido criada: <b>homeController</b>. Dentro dela os métodos:
+
 - gethome: chamada da view home;
 
 Teremos a rota:
@@ -438,7 +447,9 @@ Route::group(['middleware' => 'auth'], function() {
 #### Create Laravel Model Page
 
 > <b>@cr.lmp</b>
+
 ou
+
 > <b>@cr.lm</b>
 
 <hr>
@@ -446,7 +457,9 @@ ou
 #### Create Form Element
 
 > <b>@cv.n.form</b>
+
 ou
+
 > <b>@cv.n.form.lara</b>
 
 <hr>
@@ -484,6 +497,7 @@ que defini o CRUD.
 
 
 #### 4. Models
+
 Nomes para models respeitam a nomenclatura Camel Case. Como ultimo nome deve prevalecer "Model".
 <p>Exemplo</p>
 Considere que seja necessário criarmos uma model para clientes: <b>ClientModel</b>
@@ -491,12 +505,14 @@ Considere que seja necessário criarmos uma model para clientes: <b>ClientModel<
 <a target="_blank" href="https://pt.stackoverflow.com/questions/107177/pasta-para-models-laravel-5-1">Clique aqui</a>.</p>
 
 #### 5. Packagers
+
 O uso de packagers varia conforme a necessidade da aplicação. Além de baixá-los para uso free, o desenvolvimento de packagers segue alguns padrões:
 - Nome do packager: omnieletronica/nome_da_solucao;
 - Para nomes de modelos, controllers, views e export, segue demais configurações utilizadas acima
 
 
 #### 6. Classes
+
 Para criarmos classes para funcionalidades específicas, será criado um diretório chamado <b>Class</b> em <b>app/Class</b>.
 Dentro deste diretório conterão as classes que serão utilizadas no sistema:
 <p>Considere o arquivo <b>clsHello.php</b> - class Hello</p>
