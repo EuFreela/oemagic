@@ -563,6 +563,12 @@ $hello.getHello();
 
 ```
 
+<hr>
+
+#### Exemplo:
+
+* Crie um arquivo e salve com alguma extensão como: html; js; php; react.
+* Após, insira o código referente seguido de **@**:
 
 
-
+<img src="https://raw.githubusercontent.com/EuFreela/oemagic/master/exemple.png" >
