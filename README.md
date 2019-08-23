@@ -1,6 +1,21 @@
 <img src="code.png" width="50"> @patterns
 <hr>
 
+### OE MAGIC
+
+É uma extensão para VSCODE com o objetivo de facilitar o uso de politicas de padronização de código. Estou em um projeto onde precisei documentar o código e padronizar a forma de desenvolvimento. Para que os desenvolvedores não precisem ler muito para ser mais produtivo, criei esta extensão para uso interno do projeto.
+
+#### Instalação
+
+Para fins pessoais e de projeto, esta extensão não esta (ainda), disponibilizada publicamente no repositório de extensões do VSCODE. Para utilizar, caso queira, basta importar o diretório **oemagic** para dentro da sua instalaçao do vscode.
+
+- windows: C:\Users\seu_usuário\.vscode\extensions
+
+Reinicie o vscode. Ele ja estará instalado. Para averiguar, clique em extensões e busque por **oemagic**.
+
+
+<hr>
+
 ##### NOMENCLATURAS
 
 
