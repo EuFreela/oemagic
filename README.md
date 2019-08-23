@@ -13,6 +13,7 @@ Para fins pessoais e de projeto, esta extensão não esta (ainda), disponibiliza
 
 Reinicie o vscode. Ele ja estará instalado. Para averiguar, clique em extensões e busque por **oemagic**.
 
+<img src="https://raw.githubusercontent.com/EuFreela/oemagic/master/about.png" >
 
 <hr>
 
