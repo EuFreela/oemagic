@@ -1,11 +1,15 @@
 <img src="code.png" width="50"> @patterns
 <hr>
+
 ##### NOMENCLATURAS
+
+
 > É um conjunto de nomes e designações usados no âmbito de uma área específica do conhecimento. Este arquivo tem o objetivo de padronizar nomes para diversos fins no ambiente de programação facilitando o entendimento para melhor manutenabilidade e escabilidade do código desenvolvido.
 
 <p>A padronização também é importante para que partes do projeto possam se comunicar sem problemas, como o desenvolvimento de uma plataforma que deverá ser segmentada em diversas partes designadas à funcionalidade de cada programador da equipe. Para que as partes se comuniquem ao integrar o projeto é necessário que estejam padronizadas para se evitar problemas de incompatibilidade.</p>
 
 <p>Tipos de Nomencaturas:</p>
+
 - [ ] Pascal Case: Primeira letra do identificador e primeira letra de cada palavra concatenada em maiúsculo. Exemplo: <b>BackColor</b>;
 - [x] Camel Case: Primeira letra em minúsculo e cada palavra concatenada em maiúsculo. Exemplo: <b>backColor</b>
 
@@ -54,7 +58,9 @@
 |Página html                |html          |htmPagina       |<b>@a.html</b>         |
 
 <hr>
+
 ### Padrões para variáveis:
+
 | Tipo                                          | Nomenclatura  |Exemplo            | Sintaxe               |
 |-----------------------------------------------|---------------|-------------------|-----------------------|
 |Char, nChar, Varchar, nVarchar, Text, nText    |str            |strEmail           |@vp.strings            |
@@ -74,7 +80,9 @@
 |Boolean                                        |bln            |blnRetorno         |@vp.boolean            |
 
 <hr>
+
 ### Controles:
+
 |Objeto                     |Nomenclatura   |Sintaxe                        |
 |---------------------------|---------------|-------------------------------|
 |AdRotator                  |artCustomer    |@v.adrotator                   |
@@ -125,8 +133,11 @@
 |Xml	                    |xmlCustomer    |@v.xml                         |
 
 <hr>
+
 ### Comentários:
+
 #### 1. Para banco de dados:
+
 ##### 1.1. Cabeçalho: 
 
 > <b>@cctdb</b>
