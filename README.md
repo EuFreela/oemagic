@@ -5,7 +5,7 @@
 
 <img src="https://raw.githubusercontent.com/EuFreela/oemagic/master/oemagic/icon.png" >
 
-> É uma extensão para VSCODE com o objetivo de facilitar o uso de politicas de padronização de código. Estou em um projeto onde precisei documentar o código e padronizar a forma de desenvolvimento. Para que os desenvolvedores não precisem ler muito para ser mais produtivo, criei esta extensão para uso interno do projeto para que apenas algumas sintaxes sejam o suficientes para criarem: comentários; nomes de variáveis; fragmentos funcionais de código; etc.
+> É uma extensão para VSCODE com o objetivo de facilitar o uso de politicas de padronização de código. Estou em um projeto onde precisei documentar o código e padronizar a forma de desenvolvimento. Para que os desenvolvedores não precisem ler muito para ser mais produtivo, criei esta extensão para uso interno do projeto para que apenas algumas sintaxes sejam o suficientes para criarem: comentários; nomes de variáveis; fragmentos funcionais de código; etc. Com base neste padrão, é possível criar, de forma autônoma, um sistema para criar a documentação do código e exibi-la em uma extensão html (versão 2.0 do oemagic).
 
 #### Instalação
 
