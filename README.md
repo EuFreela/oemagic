@@ -4,6 +4,7 @@
 ### OE MAGIC
 
 <img src="https://raw.githubusercontent.com/EuFreela/oemagic/master/oemagic/icon.png" >
+
 > É uma extensão para VSCODE com o objetivo de facilitar o uso de politicas de padronização de código. Estou em um projeto onde precisei documentar o código e padronizar a forma de desenvolvimento. Para que os desenvolvedores não precisem ler muito para ser mais produtivo, criei esta extensão para uso interno do projeto.
 
 #### Instalação
